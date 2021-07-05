@@ -6,7 +6,7 @@ import "@fontsource/open-sans"
 const Layout = ({ pageTitle, children }) => {
   return (
     <div className={page}>
-      <navbar>
+      <nav>
         <ul className={navbar}>
           <li>
             <Link to="/">Calculator</Link>
@@ -18,7 +18,7 @@ const Layout = ({ pageTitle, children }) => {
             <Link to="/about">About</Link>
           </li>
         </ul>
-      </navbar>
+      </nav>
       <div>
         <h1 className={pagetitle}>{pageTitle}</h1>
         {children}
