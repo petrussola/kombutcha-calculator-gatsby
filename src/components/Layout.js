@@ -1,13 +1,15 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import { page, navbar, pagetitle } from "./Layout.module.css";
+import "@fontsource/open-sans"
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <div>
+    <div className={page}>
       <navbar>
-        <ul>
+        <ul className={navbar}>
           <li>
-            <Link to="/calculator">Calculator</Link>
+            <Link to="/">Calculator</Link>
           </li>
           <li>
             <Link to="/receipe">Receipe</Link>
@@ -17,8 +19,10 @@ const Layout = ({ pageTitle, children }) => {
           </li>
         </ul>
       </navbar>
-      <h1>{pageTitle}</h1>
-      {children}
+      <div>
+        <h1 className={pagetitle}>{pageTitle}</h1>
+        {children}
+      </div>
     </div>
   );
 };
