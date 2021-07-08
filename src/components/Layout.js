@@ -1,27 +1,26 @@
 import * as React from "react";
-import { Link } from "gatsby";
-import { page, navbar, pagetitle } from "./Layout.module.css";
-import "@fontsource/open-sans"
+import { useStaticQuery, graphql } from "gatsby";
+import { page, pagetitle, body } from "./Layout.module.css";
+import "@fontsource/open-sans";
 
-const Layout = ({ pageTitle, children }) => {
+import NavBar from "./NavBar";
+
+const Layout = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query MyQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `);
   return (
     <div className={page}>
-      <nav>
-        <ul className={navbar}>
-          <li>
-            <Link to="/">Calculator</Link>
-          </li>
-          <li>
-            <Link to="/receipe">Receipe</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
-      </nav>
+      <NavBar />
       <div>
-        <h1 className={pagetitle}>{pageTitle}</h1>
-        {children}
+        <h1 className={pagetitle}>{data.site.siteMetadata.title}</h1>
+        <div className={body}>{children}</div>
       </div>
     </div>
   );
