@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
-    title: "Kombutcha Ingredient Proportion Calculator and Kombutcha Receipes",
+    title: "Kombutcha - Receipe and Ingredient Calculator",
   },
   plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,

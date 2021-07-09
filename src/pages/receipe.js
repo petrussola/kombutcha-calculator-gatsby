@@ -19,7 +19,7 @@ const ReceipePage = () => {
   `);
   return (
     <Layout>
-      <h2>## Kombucha Receipe Step by Step ##</h2>
+      <h2>Kombucha Receipe Step by Step - Single Fermentation</h2>
       {data.allStepsJson.edges.map((step, index) => {
         return <ReceipeStep step={step} index={index} key={index} />;
       })}

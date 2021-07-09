@@ -20,18 +20,21 @@ const NavBar = () => {
     if (!item.node.path.includes("404")) {
       if (item.node.path === "/") {
         homeNode = item;
+        return null;
       } else {
         return item;
       }
+    } else {
+      return null;
     }
   });
   const arrayWithHomeFirst = [homeNode, ...filteredPages];
   return (
     <nav>
       <ul className={navbar}>
-        {arrayWithHomeFirst.map((page) => {
+        {arrayWithHomeFirst.map((page, index) => {
           return (
-            <li>
+            <li key={index}>
               <Link to={page.node.path}>
                 {page.node.path === "/"
                   ? "HOME"
