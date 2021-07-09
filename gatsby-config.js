@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "Kombutcha - Receipe and Ingredient Calculator",
+    siteUrl: "http://www.kombutcha.club",
+    title: "Kombucha - Receipe and Ingredient Calculator",
   },
   plugins: [
     "gatsby-plugin-image",
