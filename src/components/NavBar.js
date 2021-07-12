@@ -30,7 +30,6 @@ const NavBar = () => {
   });
   const arrayWithHomeFirst = [homeNode, ...filteredPages];
   return (
-    <nav>
       <ul className={navbar}>
         {arrayWithHomeFirst.map((page, index) => {
           return (
@@ -44,7 +43,6 @@ const NavBar = () => {
           );
         })}
       </ul>
-    </nav>
   );
 };
 

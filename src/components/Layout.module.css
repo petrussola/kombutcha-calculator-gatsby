@@ -1,7 +1,18 @@
 .page {
-  max-width: 800px;
-  margin: 0 auto;
+  background-image: url("../images//pattern.png");
   font-family: "Open Sans";
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
+.core {
+  max-width: 800px;
+  flex: 1 1 auto;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2rem;
 }
 
 .pagetitle {

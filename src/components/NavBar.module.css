@@ -4,6 +4,27 @@
   align-items: center;
   justify-content: space-around;
   list-style-type: none;
+  border-bottom: 1px solid #e5e6eb;
+  flex: 0 1 auto;
+  background-color: white;
+  margin: 0;
+}
+
+.navbar li {
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  margin: 0.5rem;
+  border: 1px solid white;
+  font-weight: bold;
+}
+
+.navbar li:hover {
+  background-color: #f8f8fa;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: inherit;
 }
 
 @media (max-width: 600px) {
