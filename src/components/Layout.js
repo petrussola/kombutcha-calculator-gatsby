@@ -5,6 +5,7 @@ import "@fontsource/open-sans";
 
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import Seo from "./seo";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -18,6 +19,7 @@ const Layout = ({ children }) => {
   `);
   return (
     <div className={page}>
+      <Seo />
       <NavBar />
       <div className={core}>
         <h1 className={pagetitle}>{data.site.siteMetadata.title}</h1>
