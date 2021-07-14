@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
 
+import {
+  layout,
+  results,
+  inputstyle,
+  label,
+  form,
+} from "../components/Calculator.module.css";
+
 const initialIngredients = {
   water: 0,
   sugar: 0,
@@ -28,24 +36,32 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <h2>Calculator</h2>
-      <form>
-        <label htmlFor="water">Litres of water</label>
-        <input
-          type="number"
-          name="water"
-          id="water"
-          value={ingredients.water}
-          onChange={changeHandler}
-        />
-      </form>
-      <h3>{`Sugar: ${Math.round(ingredients.sugar)} ${
-        proportions.sugar.unit
-      }`}</h3>
-      <h3>{`Tea: ${Math.round(ingredients.tea)} ${proportions.tea.unit}`}</h3>
-      <h3>{`Vinegar: ${Math.round(ingredients.vinegar)} ${
-        proportions.vinegar.unit
-      }`}</h3>
+      <div className={layout}>
+        <form className={form}>
+          <label htmlFor="water" className={label}>
+            Litres of water:
+          </label>
+          <input
+            type="number"
+            name="water"
+            id="water"
+            value={ingredients.water}
+            onChange={changeHandler}
+            className={inputstyle}
+          />
+        </form>
+        <div className={results}>
+          <h2>{`Sugar: ${Math.round(ingredients.sugar)} ${
+            proportions.sugar.unit
+          }`}</h2>
+          <h2>{`Tea: ${Math.round(ingredients.tea)} ${
+            proportions.tea.unit
+          }`}</h2>
+          <h2>{`Vinegar: ${Math.round(ingredients.vinegar)} ${
+            proportions.vinegar.unit
+          }`}</h2>
+        </div>
+      </div>
     </Layout>
   );
 };
