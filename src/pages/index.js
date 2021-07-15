@@ -1,23 +1,11 @@
 import React from "react";
 import Layout from "../components/Layout";
 
-import { useStaticQuery, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 import DescriptionParagraph from "../components/DescriptionParagraph";
 
-const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query KombuchaText {
-      allKombuchaJson {
-        edges {
-          node {
-            id
-            text
-          }
-        }
-      }
-    }
-  `);
+const IndexPage = ({ data }) => {
   return (
     <Layout>
       {data.allKombuchaJson.edges.map((para) => {
@@ -26,5 +14,18 @@ const IndexPage = () => {
     </Layout>
   );
 };
+
+export const query = graphql`
+  query KombuchaText {
+    allKombuchaJson {
+      edges {
+        node {
+          id
+          text
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;

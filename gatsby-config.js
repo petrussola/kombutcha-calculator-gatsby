@@ -31,9 +31,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-adsense`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        publisherId: process.env.GATSBY_ADSENSE_PUBLISHER_ID,
+        name: `blog`,
+        path: `${__dirname}/blog`,
       },
     },
   ],
