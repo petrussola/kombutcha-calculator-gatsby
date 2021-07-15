@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    url: "https://www.kombutcha.club",
+    siteUrl: "https://www.kombutcha.club",
     title: "Kombucha - Receipe and Ingredient Calculator",
     titleTemplate: "%s · Kombucha Receipe and Ingredient Proportion Calculator",
     description:
