@@ -2,6 +2,9 @@
   "name": "kombutcha-calculator",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=24 <26"
+  },
   "description": "kombutcha calculator",
   "keywords": [
     "gatsby"
@@ -16,16 +19,16 @@
   "dependencies": {
     "@fontsource/open-sans": "^4.4.5",
     "dotenv": "^16.3.1",
-    "gatsby": "^3.8.1",
+    "gatsby": "^5.16.1",
     "gatsby-plugin-google-adsense": "^1.1.3",
-    "gatsby-plugin-image": "^1.9.0",
-    "gatsby-plugin-react-helmet": "^4.9.0",
-    "gatsby-plugin-sharp": "^3.9.0",
-    "gatsby-plugin-sitemap": "^4.5.0",
-    "gatsby-source-filesystem": "^3.9.0",
-    "gatsby-transformer-json": "^3.9.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "gatsby-plugin-image": "^3.16.0",
+    "gatsby-plugin-react-helmet": "^6.16.0",
+    "gatsby-plugin-sharp": "^5.16.0",
+    "gatsby-plugin-sitemap": "^6.16.0",
+    "gatsby-source-filesystem": "^5.16.0",
+    "gatsby-transformer-json": "^5.16.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0"
   }
 }
